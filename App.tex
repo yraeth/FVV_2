@@ -1,0 +1,180 @@
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{OD-Matrix} \label{sec:a1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\createtable[h]{OD-Matrix of synthetic population}{OD-Matrix of the synthetic population.}{\label{tab:odmatrix}}{\begin{tabular}{crrrrrrrrrrr}\toprule
+\multicolumn{1}{l}{}                        &                         & \multicolumn{10}{c}{Destination$_j$}                                \\ 
+\multicolumn{1}{l}{}                        & \multicolumn{1}{r|}{Zones}                   & 1    & 2    & 3    & 4   & 5    & 6    & 7    & 8   & 9   & 10  \\ \cline{2-12} 
+\multicolumn{1}{c}{\multirow{10}{*}{\begin{turn}{90}Origin$_i$\end{turn}}} & \multicolumn{1}{r|}{1}  & 569  & 89   & 79   & 119 & 94   & 40   & 99   & 18  & 23  & 15  \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{2}  & 2211 & 1283 & 762  & 550 & 857  & 505  & 419  & 151 & 145 & 138 \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{3}  & 306  & 121  & 225  & 74  & 693  & 103  & 95   & 66  & 83  & 122 \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{4}  & 1384 & 247  & 345  & 670 & 244  & 119  & 1296 & 157 & 84  & 111 \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{5}  & 717  & 243  & 1103 & 173 & 1927 & 291  & 260  & 72  & 302 & 135 \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{6}  & 1182 & 689  & 833  & 327 & 1245 & 1205 & 485  & 197 & 278 & 70  \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{7}  & 842  & 132  & 159  & 763 & 268  & 124  & 1648 & 275 & 46  & 68  \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{8}  & 791  & 263  & 600  & 647 & 379  & 283  & 1539 & 470 & 530 & 199 \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{9}  & 265  & 55   & 180  & 85  & 789  & 114  & 55   & 114 & 99  & 15  \\
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{10} & 221  & 111  & 565  & 229 & 375  & 45   & 165  & 96  & 26  & 341 \\ \bottomrule
+\end{tabular}}{}		
+
+\section{MNL - Biogeme output}\label{sec:mc}
+
+\createtable[H]{MNL - Biogeme output}{MNL - Biogeme output}{\label{tab:mc}}{
+ \begin{tabular}{l}
+\begin{tabular}{rlr@{.}lr@{.}lr@{.}lr@{.}l}
+         &                       &   \multicolumn{2}{l}{}    & \multicolumn{2}{l}{Robust}  &     \multicolumn{4}{l}{}   \\
+Parameter &                       &   \multicolumn{2}{l}{Coeff.}      & \multicolumn{2}{l}{Asympt.}  &     \multicolumn{4}{l}{}   \\
+number &  Description                     &   \multicolumn{2}{l}{estimate}      & \multicolumn{2}{l}{std. error}  &   \multicolumn{2}{l}{$t$-stat}  &   \multicolumn{2}{l}{$p$-value}   \\
+
+\hline
+
+1 & $\beta_{\text{age, bike}}$ & 0&0670 & 0&00972 & 6&89 & 0&00 \\
+2 & $\beta_{\text{age, mit}}$ & -0&000180 & 0&00171 & -0&11 & 0&92 \\
+3 & $\beta_{\text{age, pt}}$ & -0&00542 & 0&00214 & -2&53 & 0&01 \\
+4 & $\beta_{\text{empl, bike}}$ & -0&617 & 0&255 & -2&42 & 0&02 \\
+5 & $\beta_{\text{empl, mit}}$ & -1&34 & 0&172 & -7&77 & 0&00 \\
+6 & $\beta_{\text{empl, pt}}$ & -0&227 & 0&118 & -1&92 & 0&05 \\
+7 & $\beta_{\text{nr. o. wp, bike}}$ & -0&700 & 0&0775 & -9&03 & 0&00 \\
+8 & $\beta_{\text{nr. o. wp, mit}}$ & 0&223 & 0&0388 & 5&74 & 0&00 \\
+9 & $\beta_{\text{nr. o. wp, pt}}$ & 0&358 & 0&0690 & 5&19 & 0&00 \\
+10 & $\beta_{\text{season, pt}}$ & 2&72 & 0&0614 & 44&34 & 0&00 \\
+11 & $\beta_{\text{tt, bike}}$ & 0&0168 & 0&00506 & 3&32 & 0&00 \\
+12 & $\beta_{\text{tt, mit}}$ & 0&0437 & 0&00426 & 10&27 & 0&00 \\
+13 & $\beta_{\text{tt, pt}}$ & 0&0576 & 0&00451 & 12&77 & 0&00 \\
+14 & $\beta_{\text{age$^2$, bike}}$ & -0&00111 & 0&000126 & -8&84 & 0&00 \\
+15 & $asc_\text{bike}$ & 0&497 & 0&328 & 1&52 & 0&13 \\
+16 & $asc_\text{car}$ & 1&62 & 0&205 & 7&89 & 0&00 \\
+17 & $asc_\text{pt}$ & -2&62 & 0&217 & -12&05 & 0&00 \\
+\hline
+
+\end{tabular}
+\\
+\begin{tabular}{rcl}
+\multicolumn{3}{l}{\textbf{ Summary statistics}}\\
+\multicolumn{3}{l}{ Number of observations = $19798$} \\
+ $\mathcal{L}(0)$ &=&  $-26993.745$ \\
+ $\mathcal{L}(c)$ &=& ???\\
+ $\mathcal{L}(\hat{\beta})$ &=& $-20232.034 $  \\
+ $-2[\mathcal{L}(0) -\mathcal{L}(\hat{\beta})]$ &=& $13523.421$ \\
+    $\rho^2$ &=&   $0.250$ \\
+    $\bar{\rho}^2$ &=&    $0.250$ \\
+\end{tabular}
+\end{tabular}}{}		
+
+
+\section{VOT - Biogeme output}\label{sec:vot}
+
+
+\createtable[H]{VOT - Biogeme}{VOT - Biogeme output}{\label{tab:vot}}{
+  \begin{tabular}{l}
+\begin{tabular}{rlr@{.}lr@{.}lr@{.}lr@{.}l}
+         &                       &   \multicolumn{2}{l}{}    & \multicolumn{2}{l}{Robust}  &     \multicolumn{4}{l}{}   \\
+Parameter &                       &   \multicolumn{2}{l}{Coeff.}      & \multicolumn{2}{l}{Asympt.}  &     \multicolumn{4}{l}{}   \\
+number &  Description                     &   \multicolumn{2}{l}{estimate}      & \multicolumn{2}{l}{std. error}  &   \multicolumn{2}{l}{$t$-stat}  &   \multicolumn{2}{l}{$p$-value}   \\
+
+\hline
+
+1 & $\beta_{\text{age, bike}}$ & -0&0276 & 0&00621 & -4&44 & 0&00 \\
+2 & $\beta_{\text{age, mit}}$ & -0&00238 & 0&00152 & -1&57 & 0&12 \\
+3 & $\beta_{\text{age, pt}}$ & -0&0238 & 0&00215 & -11&07 & 0&00 \\
+4 & $\beta_{\text{cost, mit}}$ & -0&0391 & 0&00407 & -9&60 & 0&00 \\
+5 & $\beta_{\text{dist bs, pt}}$ & -0&000383 & 6&12e-05 & -6&26 & 0&00 \\
+6 & $\beta_{\text{empl, bike}}$ & 0&0571 & 0&0625 & 0&91 & 0&36 \\
+7 & $\beta_{\text{empl, mit}}$ & 0&899 & 0&0531 & 16&95 & 0&00 \\
+8 & $\beta_{\text{empl, pt}}$ & 1&04 & 0&0811 & 12&78 & 0&00 \\
+9 & $\beta_{\text{season, pt}}$ & 2&44 & 0&0714 & 34&20 & 0&00 \\
+10 & $\beta_{\text{sex, bike}}$ & -0&355 & 0&0579 & -6&12 & 0&00 \\
+11 & $\beta_{\text{sex, mit}}$ & -0&755 & 0&0539 & -14&01 & 0&00 \\
+12 & $\beta_{\text{sex, pt}}$ & -0&473 & 0&0771 & -6&13 & 0&00 \\
+13 & $\beta_{\text{tt, bike}}$ & -0&0293 & 0&00157 & -18&69 & 0&00 \\
+14 & $\beta_{\text{tt, mit}}$ & -0&0247 & 0&00446 & -5&54 & 0&00 \\
+15 & $\beta_{\text{tt, pt}}$ & 0&0544 & 0&00639 & 8&51 & 0&00 \\
+16 & $\beta_{\text{tt, walk}}$ & -0&00132 & 5&84e-05 & -22&59 & 0&00 \\
+17 & $\beta_{\text{age$^2$, bike}}$ & 7&86e-05 & 8&09e-05 & 0&97 & 0&33 \\
+18 & $asc_\text{bike}$ & 0&00876 & 0&110 & 0&08 & 0&94 \\
+19 & $asc_\text{car}$ & -0&858 & 0&0800 & -10&72 & 0&00 \\
+20 & $asc_\text{pt}$ & -4&10 & 0&138 & -29&76 & 0&00 \\
+\hline
+
+\end{tabular}
+\\
+\begin{tabular}{rcl}
+\multicolumn{3}{l}{ \textbf{Summary statistics}}\\
+\multicolumn{3}{l}{ Number of observations = $13985$} \\
+ $\mathcal{L}(0)$ &=&  $-19314.255$ \\
+ $\mathcal{L}(c)$ &=& ???\\
+ $\mathcal{L}(\hat{\beta})$ &=& $-13577.733 $  \\
+ $-2[\mathcal{L}(0) -\mathcal{L}(\hat{\beta})]$ &=& $11473.046$ \\
+    $\rho^2$ &=&   $0.297$ \\
+    $\bar{\rho}^2$ &=&    $0.296$ \\
+\end{tabular}
+\end{tabular}}{}		
+
+\section{OD-Matrix for different modes}\label{seq:od_mode}
+
+\createtable[h]{OD-Matrix by mode: walking}{OD-Matrix by mode: walking}{\label{tab:odmatrix_w}}{\begin{tabular}{crrrrrrrrrrr}\toprule
+\multicolumn{1}{l}{}                        &                         & \multicolumn{10}{c}{Destination$_j$}                                \\ 
+\multicolumn{1}{l}{}                        & \multicolumn{1}{r|}{Zones}                   & 1    & 2    & 3    & 4   & 5    & 6    & 7    & 8   & 9   & 10  \\ \cline{2-12} 
+\multicolumn{1}{c}{\multirow{10}{*}{\begin{turn}{90}Origin$_i$\end{turn}}} & \multicolumn{1}{r|}{1}  & 113 & 18 & 16 & 24 & 19 & 8 & 20 & 3 & 4 & 3 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{2}  & 418 & 242 & 144 & 104 & 162 & 95 & 79 & 29 & 27 & 26 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{3}  &  61 & 24 & 45 & 15 & 137 & 20 & 19 & 13 & 16 & 24 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{4}  & 265 & 47 & 66 & 128 & 47 & 23 & 248 & 30 & 16 & 21 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{5}  & 135 & 46 & 207 & 32 & 362 & 55 & 49 & 14 & 57 & 25 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{6}  & 223 & 130 & 157 & 62 & 235 & 228 & 92 & 37 & 53 & 13 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{7}  & 145 & 23 & 27 & 132 & 46 & 21 & 284 & 47 & 8 & 12 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{8}  & 145 & 48 & 110 & 118 & 69 & 52 & 281 & 86 & 97 & 36 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{9}  &  50 & 10 & 34 & 16 & 148 & 21 & 10 & 21 & 19 & 3 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{10} & 40 & 20 & 101 & 41 & 67 & 8 & 30 & 17 & 5 & 61 \\  \bottomrule
+\end{tabular}}{}
+
+
+\createtable[h]{OD-Matrix by mode: cycling}{OD-Matrix by mode: cycling}{\label{tab:odmatrix_c}}{\begin{tabular}{crrrrrrrrrrr}\toprule
+\multicolumn{1}{l}{}                        &                         & \multicolumn{10}{c}{Destination$_j$}                                \\ 
+\multicolumn{1}{l}{}                        & \multicolumn{1}{r|}{Zones}                   & 1    & 2    & 3    & 4   & 5    & 6    & 7    & 8   & 9   & 10  \\ \cline{2-12} 
+\multicolumn{1}{c}{\multirow{10}{*}{\begin{turn}{90}Origin$_i$\end{turn}}} & \multicolumn{1}{r|}{1}  & 100 & 16 & 14 & 21 & 16 & 7 & 17 & 3 & 4 & 3 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{2}  & 410 & 238 & 141 & 102 & 159 & 94 & 78 & 28 & 27 & 26 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{3}  &  59 & 23 & 43 & 14 & 133 & 20 & 18 & 13 & 16 & 23 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{4}  &  271 & 49 & 68 & 131 & 48 & 23 & 254 & 31 & 17 & 22 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{5}  &136 & 46 & 209 & 33 & 365 & 55 & 49 & 14 & 57 & 26 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{6}  & 216 & 126 & 152 & 60 & 227 & 220 & 89 & 36 & 51 & 13 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{7}  &  148 & 23 & 28 & 134 & 47 & 22 & 289 & 48 & 8 & 12 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{8}  &143 & 47 & 108 & 117 & 69 & 51 & 278 & 85 & 96 & 36 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{9}  & 51 & 11 & 34 & 16 & 151 & 22 & 11 & 22 & 19 & 3 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{10} &  40 & 20 & 102 & 41 & 68 & 8 & 30 & 17 & 5 & 62 \\   \bottomrule
+\end{tabular}}{}
+
+
+\createtable[h]{OD-Matrix by mode: public transport}{OD-Matrix by mode: public transport}{\label{tab:odmatrix_pt}}{\begin{tabular}{crrrrrrrrrrr}\toprule
+\multicolumn{1}{l}{}                        &                         & \multicolumn{10}{c}{Destination$_j$}                                \\ 
+\multicolumn{1}{l}{}                        & \multicolumn{1}{r|}{Zones}                   & 1    & 2    & 3    & 4   & 5    & 6    & 7    & 8   & 9   & 10  \\ \cline{2-12} 
+\multicolumn{1}{c}{\multirow{10}{*}{\begin{turn}{90}Origin$_i$\end{turn}}} & \multicolumn{1}{r|}{1}  &  41 & 6 & 6 & 9 & 7 & 3 & 7 & 1 & 2 & 1 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{2}  & 171 & 99 & 59 & 42 & 66 & 39 & 32 & 12 & 11 & 11 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{3}  &  20 & 8 & 15 & 5 & 45 & 7 & 6 & 4 & 5 & 8 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{4}  &  97 & 17 & 24 & 47 & 17 & 8 & 91 & 11 & 6 & 8 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{5}  & 50 & 17 & 77 & 12 & 135 & 20 & 18 & 5 & 21 & 9 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{6}  & 86 & 50 & 60 & 24 & 90 & 87 & 35 & 14 & 20 & 5 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{7}  & 70 & 11 & 13 & 64 & 22 & 10 & 138 & 23 & 4 & 6 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{8}  &61 & 20 & 46 & 50 & 29 & 22 & 118 & 36 & 41 & 15 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{9}  & 23 & 5 & 15 & 7 & 68 & 10 & 5 & 10 & 9 & 1 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{10} &   16 & 8 & 42 & 17 & 28 & 3 & 12 & 7 & 2 & 25 \\   \bottomrule
+\end{tabular}}{}
+
+\createtable[h]{OD-Matrix by mode: mit}{OD-Matrix by mode: mit}{\label{tab:odmatrix_mit}}{\begin{tabular}{crrrrrrrrrrr}\toprule
+\multicolumn{1}{l}{}                        &                         & \multicolumn{10}{c}{Destination$_j$}                                \\ 
+\multicolumn{1}{l}{}                        & \multicolumn{1}{r|}{Zones}                   & 1    & 2    & 3    & 4   & 5    & 6    & 7    & 8   & 9   & 10  \\ \cline{2-12} 
+\multicolumn{1}{c}{\multirow{10}{*}{\begin{turn}{90}Origin$_i$\end{turn}}} & \multicolumn{1}{r|}{1}  &  303 & 47 & 42 & 63 & 50 & 21 & 53 & 9 & 12 & 8 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{2}  & 1172 & 680 & 404 & 291 & 455 & 268 & 222 & 80 & 77 & 73 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{3}  &  161 & 64 & 118 & 39 & 365 & 54 & 50 & 35 & 44 & 64 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{4}  &  725 & 130 & 181 & 351 & 128 & 62 & 679 & 82 & 44 & 58 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{5}  & 383 & 130 & 589 & 92 & 1030 & 155 & 139 & 39 & 161 & 72 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{6}  & 635 & 370 & 448 & 176 & 670 & 648 & 261 & 106 & 149 & 38 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{7}  &  465 & 73 & 88 & 421 & 148 & 68 & 910 & 152 & 26 & 38 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{8}  &429 & 143 & 326 & 351 & 206 & 153 & 834 & 255 & 288 & 108 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{9}  & 136 & 28 & 93 & 44 & 407 & 59 & 28 & 59 & 51 & 8 \\ 
+\multicolumn{1}{c}{}                       & \multicolumn{1}{r|}{10} & 120 & 61 & 308 & 125 & 204 & 24 & 90 & 52 & 14 & 186 \\   \bottomrule
+\end{tabular}}{}
+
+
+

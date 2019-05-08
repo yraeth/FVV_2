@@ -1,0 +1,485 @@
+%1. Define the authors #author
+%2. Define the MOdule @_latexfiles/_layouts/ivt-student
+%3. Define the institute #institute
+%4. Define the title #title
+%5. Define the date #date
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% IVT LaTeX template
+%%   Kirill Müller
+%%   kirill.mueller@ivt.baug.ethz.ch
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Encoding check:
+%%   ä  ö  ü  Ä  Ö  Ü  ß  á  é  í  ó  ú  à  è  ì  ò  ù  â  ê  î  ô  û
+%%
+%%   If the above contains rubbish, please re-open this file using
+%%   the CORRECT encoding.  By default this is UTF-8.
+%%   DO NOT save the file in this case!
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% This is an example for writing a paper at the IVT.
+%% It supports English and German language.
+%% By using it, it is possible to switch paper layouts easily
+%% (e.g., working paper style into TRB style)
+%%
+%% The easiest way to write you own paper is to create an
+%% appropriate directory stucture in the papers subdirectory
+%% i.e. papers/strc/2007/mypaper,
+%% copy this template and modify it there.
+%%
+%% See the note below on renaming the main file.
+%%
+%% Each keyword is documented. Just follow the instructions...
+%% Enjoy!
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% IMPORTANT NOTE ON FILE RENAMES:
+%%   If you rename this file, look for the text "Template"
+%%   in all files and change this to the new filename, too.
+%%   There is a script that will do this for you in
+%%   Linux/Windows+cygwin or Mac OS X: Simply execute
+%%
+%%       _latexfiles/tools/rename.sh Assignment NewName
+%%
+%%   Substitute NewName with a name of your choice.
+%%
+%%   In Windows, use your favorite find-in-text-files tool
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Location of the common files
+%%   Windows: If unsure, please leave this as it is and execute the
+%%     script createLatexfilesLink.bat once.
+%%
+%%   Linux: If unsure, please leave this as it is and run "make" to
+%%     compile the document.
+%%
+\newcommand{\mypath}{_latexfiles/}
+%\newcommand{\mypath}{../../../}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% language specification:
+%%   Here you define in which langugage your paper will be written.
+%%   There are ALWAYS 2 languages to define (even you do not need it.)
+%%   Since we are writing only in German or English, other languages
+%%   are not supported.
+%%   Choose either 'german' or 'english' as your first language.
+\newcommand{\myfirstlang}{german}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Include Paper-Layout:
+%%   Here the ivt working paper layout is chosen
+%%   For changing this paper into i.e. TRB layout just change "ivt-wp"
+%%   to "trb"
+\input{\mypath../_latexfiles/_layouts/ivt-student}
+%\input{_latexfiles/_layouts/ivt-wp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Encoding specification:
+%%   Here it is specified that your files use the more versatile
+%%   UTF-8 encoding.  This is now the default
+%%
+\inputencoding{utf8}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% START DOCUMENT KEYWORDS
+%%   In this part you can define Authors, Date, Titlefigure, etc...
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The figure to include in the  page:
+%% - {path/to/the/figure}: includes this figure in the title
+%% - {}: no figure will be included
+%% Note:
+%%   do not write the ending of your figure ("MATSimLoop" instead
+%%   of "MATSimLoop.pdf")
+\newcommand{\mytitlefigure}{}%figures/XY.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The title of the paper
+\newcommand{\mytitle}{Dimensionierung von Fussgängeranlagen} %#title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The institution (group) for which the paper is written
+\newcommand{\myinstitutionDE}{Institut für Verkehrsplanung und
+                              Transportsysteme}
+\newcommand{\myinstitutionEN}{Institute for Transport Planning and
+                              Systems} %#institute
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The number of the paper
+%%   Ask the webmaster (Patrick Scherer) to reserve a number just
+%%   before submitting your paper/thesis
+\newcommand{\mynumber}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The year of the paper
+\newcommand{\myyear}{2019} %#date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The month of the paper
+%% - include only: jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec
+\newcommand{\mymonth}{may}  %#date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The day of the paper
+%% - include day in number 1,..., 12,..., 31
+\newcommand{\myday}{15} %#date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The keywords (English)
+\newcommand{\mykeywordsEN}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The keywords (German)
+\newcommand{\mykeywordsDE}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Define the authors
+%% - if author name is left empty
+%%   \newcommand{\mysecondauthor}{}
+%%   it is not shown
+%% - keep the right order (first, second, etc...) and keep the
+%%   remaining entries empty!
+%% - also add the way the authors appear in the reference style
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 1
+\newcommand{\myfirstauthor}{Jonas Hess} %#author
+\newcommand{\myfirstauthorREF}{} % LastName,~FirstNameAbbr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 2
+\newcommand{\mysecondauthor}{Michael Tobias Nehmiz}
+\newcommand{\mysecondauthorREF}{} % FirstNameAbbr LastName
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 3
+\newcommand{\mythirdauthor}{Yves Marc Räth}
+\newcommand{\mythirdauthorREF}{} % FirstNameAbbr LastName
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 4
+\newcommand{\myfourthauthor}{}
+\newcommand{\myfourthauthorREF}{} % FirstNameAbbr LastName
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 5
+\newcommand{\myfifthauthor}{}
+\newcommand{\myfifthauthorREF}{} % FirstNameAbbr LastName
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The author 6
+\newcommand{\mysixthauthor}{}
+\newcommand{\mysixthauthorREF}{} % FirstNameAbbr LastName
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% .. up to 12 authors supported by the Assignments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Define the addresses
+%% - if author name is left empty
+%%   \newcommand{\mysecondaddress}{}
+%%   it is not shown
+%% - if two authors share the same affiliation, they should also use
+%%   the same address
+%% - keep the right order (first, second, etc...) and keep the
+%%   remaining entries empty!
+%% - also add the way the authors appear in the reference style
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Increase this if you have more than two addresses
+%%   Up to three columns are supported, for more than three addresses
+%%   a second row will be created
+\newcommand{\mynumaddresscolumns}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The first address
+\newcommand{\myfirstaddress}{
+  \createcontact{\myfirstauthor, \mysecondauthor}%
+  {IVT}
+  {ETH Zürich}
+  {\\CH-8093 Zürich}
+  {+41-44-633 XX YY}
+  {+41-44-633 10 57}
+  {\{first,second\}@ivt.baug.ethz.ch}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The second address
+\newcommand{\mysecondaddress}{%
+  \createcontact{\mythirdauthor}%
+  {Other Institute}
+  {Other University}
+  {Other Address\\OtherCountry-OtherZip OtherCity}
+  {+41-AA-BBB CC DD}
+  {+41-AA-BBB CC DE}
+  {participated@oi.ou.ch}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The third address
+\newcommand{\mythirdaddress}{%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The fourth address
+\newcommand{\myfourthaddress}{%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The fifth address
+\newcommand{\myfifthaddress}{%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The sixth address
+\newcommand{\mysixthaddress}{%
+}
+
+\newcommand{\specialcell}[2][b]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% END DOCUMENT KEYWORDS
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% START USER DEFINED COMMANDS
+%%   Sometimes latex does not do hyphenations. This happens if it
+%%   does not recognize a specific word. with "\hyphenation"
+%%   you can add rules for those words
+%% for advanced users:
+%%   Advanced users can add additional commands here
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Word split: unknown words for latex. show how to split them.
+\hyphenation{Trenn-re-geln}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% END USER DEFINED COMMANDS
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% To speed up compilation, you can split this file and move the
+%%   contents of the upper part (just before the %&Assignment line)
+%%   to a new file named Assignment.ltx.  This requires a working
+%%   installation of GNU Make (included in Linux/Mac OS X,
+%%   in Windows: through cygwin or GnuWin32).
+%%
+%% The commands between \iffalse and \fi will do this for you
+%% (Linux/Mac OS X):
+\iffalse
+mv Assignment.tex Assignment.tmp
+grep -B 10000 '^%&Assignment' Assignment.tmp > Assignment.ltx
+grep -A 10000 '^%&Assignment' Assignment.tmp > Assignment.tex
+rm Assignment.tmp
+\fi
+%&Assignment
+%\input{Assignment.ltx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% START OF DOCUMENT
+%%   Here actually begins your document. The things below
+%%   are a typical order in which a paper should be organized.
+%%   Sometimes, editors have other suggenstions. In this case
+%%   just change the order in which each part should appear.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[skip=4pt]{caption}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{units}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\usepackage{tabularx}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Include the title page
+\createtitlepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Page numbering is taken care of by the Assignments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Table of contents
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% List of figures and tables
+\listoffigures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% List of tables
+\listoftables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If the next part should start at a new page insert \clearpage
+%% command
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Page numbering is taken care of by the Assignments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACT (first language)
+%%   You can write it just here, if you want. You can also include
+%%   an external .tex file (for better organization of you paper)
+%%   The abstract MUST always be embedded into a command:
+%%     \createabstract{
+%%     This is an
+%%     example abstract.
+%%     }
+%%   Be sure that your abstract is embedded into the curly brackets.
+%%
+%%   You can also put the abstract in a seperate .tex file for better
+%%   organization. The command then is:
+%%     \input{abstract-first}
+%%   see also below (include sections)
+%\createabstract{Abstract in the first language}
+%%\input{abstract-first}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following is necessary only if you provide an abstract in the
+%%   other language (e.g. a German abstract for a paper written
+%%   in English)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACT (second language)
+%% You need to define the language for the following abstract...
+%\switchlanguage
+%%   Same as above
+%\createabstract{Zusammenfassung in der Zweitsprache}
+%%\input{abstract-second}
+%% reset to the default language
+%\switchlanguage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Sections
+%%   Here you can start with your paper.
+%%   The following just split up the sections into external .tex
+%%   files (Section1.tex, ... Section4.tex and Ack.tex),
+%%   for better organization.
+%%   It is not necessary to do that, but convenient.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+
+\input{Intro.tex}
+\input{Section1}
+\input{Section2}
+\input{Section3}
+ %\input{Section4}
+%\input{Section5}
+%\input{Ack}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+%%   Leave this as is, and add you own entries to my.bib
+%%   Many references are already defined in _latexfiles/bibs/all-eng.bib
+%%   Refer to the BibTeX/LaTeX tutorial for adding new entries
+%%   to the IVT BibTeX database
+\bibliography{\mypath../_latexfiles/bibs/all-eng,my}
+%\bibliography{_latexfiles/bibs/all-eng,my}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Appendices
+%%   Usually they would start on a separate page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+%\input{App}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% END OF DOCUMENT
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Editor specific keywords:
+%%   This is not part of you paper, but sometimes it is used
+%%   for additional features of TeX Editors.
+%%
+%% WinEdt:
+%%   to get the bibliography list
+%GATHER{./_bibs/all-eng.bib}
